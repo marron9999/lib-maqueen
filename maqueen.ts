@@ -1,4 +1,4 @@
-//% weight=10 color=#008B00 icon="\uf2db" block="mbitlink"
+//% weight=10 color=#008B00 icon="\uf2db" block="maqueen"
 namespace lib_maqueen {
 
 export let value = {
