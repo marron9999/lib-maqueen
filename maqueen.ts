@@ -27,7 +27,7 @@ function setupAudio() {
 //% blockId=maqueen_start block="Start maqueen |%sleep "
 //% sleep.defl=50 sleep.min=0 sleep.max=1000
 //% weight=95
-export function start(sleep = 50) {
+export function start(sleep : number = 50) {
     request.sleep = sleep
     setupAudio()
     lib_mbitlink.reseter(reset)
