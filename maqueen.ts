@@ -30,8 +30,8 @@ function setupAudio() {
 export function start(sleep = 50) {
     request.sleep = sleep
     setupAudio()
-    mbitlink.reseter(reset)
-    mbitlink.reciver(parse)
+    lib_mbitlink.reseter(reset)
+    lib_mbitlink.reciver(parse)
     basic.forever(function () {
         inspect()
         if(request.sleep > 0)
