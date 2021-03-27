@@ -14,6 +14,8 @@ export let request = {
     sleep: 50
 }
 
+//% blockId=maqueen_setup_audio block="Setup audio for maqueen"
+//% weight=95
 export function setupAudio() {
     pins.analogSetPitchPin(AnalogPin.P0)
     pins.setAudioPin(AnalogPin.P0)
@@ -29,7 +31,7 @@ export function setupAudio() {
 //% weight=95
 export function start(sleep : number = 50) {
     request.sleep = sleep
-    setupAudio()
+	reset()
     lib_mbitlink.reseter(reset)
     lib_mbitlink.reciver(parse)
     basic.forever(function () {
@@ -40,6 +42,9 @@ export function start(sleep : number = 50) {
 }
 
 export function reset() {
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 0)
+    maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
+    maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff)
     request.LineSensor = 0
     request.Ultrasonic = 0
     request.AutoTrace = 0
