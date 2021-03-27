@@ -14,7 +14,7 @@ export let request = {
     sleep: 50
 }
 
-function setupAudio() {
+export function setupAudio() {
     pins.analogSetPitchPin(AnalogPin.P0)
     pins.setAudioPin(AnalogPin.P0)
     pins.analogWritePin(AnalogPin.P0, 0)
