@@ -34,11 +34,7 @@ export function start(sleep : number = 50) {
 	reset()
     lib_mbitlink.reseter(reset)
     lib_mbitlink.reciver(parse)
-    basic.forever(function () {
-        inspect()
-        if(request.sleep > 0)
-            basic.pause(request.sleep)
-    })
+    lib_mbitlink.inspecter(inspect)
 }
 
 export function reset() {
