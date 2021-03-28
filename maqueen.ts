@@ -26,8 +26,7 @@ export function setupAudio() {
 /**
  * Start maqueen service
  */
-//% blockId=maqueen_start block="Start maqueen |%sleep "
-//% sleep.defl=50 sleep.min=0 sleep.max=1000
+//% blockId=maqueen_start block="Start maqueen"
 //% weight=95
 export function start(sleep : number = 50) {
     request.sleep = sleep
