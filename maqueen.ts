@@ -148,6 +148,7 @@ function keepline() {
 
 function L(str : string) {
     let c = str.charAt(0)
+    str = str.substr(1)
     let v = maqueen.LEDswitch.turnOff
     if (str.charAt(0) != "0") v = maqueen.LEDswitch.turnOn
     if (c == "L") {
