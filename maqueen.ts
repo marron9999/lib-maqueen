@@ -10,8 +10,7 @@ export let value = {
 export let request = {
     LineSensor : 0,
     Ultrasonic : 0,
-    AutoTrace : 0,
-    sleep: 50
+    AutoTrace : 0
 }
 
 //% blockId=maqueen_setup_audio block="Setup audio for maqueen"
@@ -28,9 +27,8 @@ export function setupAudio() {
  */
 //% blockId=maqueen_start block="Start maqueen"
 //% weight=95
-export function start(sleep : number = 50) {
-    request.sleep = sleep
-	reset()
+export function start() {
+    reset()
     lib_mbitlink.reseter(reset)
     lib_mbitlink.reciver(parse)
     lib_mbitlink.inspecter(inspect)
